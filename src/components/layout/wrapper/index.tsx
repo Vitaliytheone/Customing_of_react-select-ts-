@@ -1,7 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+
+const Wrap = styled.div`
+    padding: 16px;
+`;
 
 const Wrapper: React.FC<{ children: React.ReactNode }> = ({ children }: any) => {
-    return <div>{children}</div>;
+    return <Wrap>{children}</Wrap>;
 };
 
 export default Wrapper;
