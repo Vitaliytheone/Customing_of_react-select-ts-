@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Wrap = styled.h1`
     font-size: 18px;
-    font-weight: bol;
+    font-weight: bold;
     margin-bottom: 16px;
 `;
 

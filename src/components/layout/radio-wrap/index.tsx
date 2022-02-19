@@ -5,7 +5,7 @@ import { radioData } from "./data";
 const Wrap = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-betwenn;
+    margin-top: 16px;
 `;
 
 const RadioWrap = () => {
