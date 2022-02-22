@@ -23,5 +23,4 @@ export type TSelectProps = Partial<Props> & {
     errorText?: string;
     width?: string;
     maxWidth?: string;
-    onClick?: () => void;
 };
