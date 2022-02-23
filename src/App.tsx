@@ -13,7 +13,7 @@ function App() {
     return (
         <Wrapper>
             <Title>Custom React-Select component</Title>
-            <Select options={options} />
+            <Select label="Tasty select" placeholder="Select me..." options={options} />
             <RadioWrap />
         </Wrapper>
     );
