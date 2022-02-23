@@ -9,7 +9,6 @@ type TWrapper = {
     isDisabled?: boolean;
     width?: string;
     maxWidth?: string;
-    onClick?: () => void;
 };
 
 const WrapperStyled = styled.div<{ $isError: boolean; $isDisabled: boolean; $width: string; $maxWidth: string }>`
@@ -27,13 +26,11 @@ const Wrapper = ({
     width = "100%",
     maxWidth = "100%",
     children,
-    onClick,
 }: PropsWithChildren<TWrapper>) => {
     return (
         <WrapperStyled
             id={id}
             className={className}
-            onClick={onClick}
             $isError={isError}
             $isDisabled={isDisabled}
             $width={width}
