@@ -35,7 +35,7 @@ const SelectCustom = ({
                 }}
                 styles={customStyles as StylesConfig<any>}
             />
-            {errorText && <ErrorText>{errorText}</ErrorText>}
+            {error && errorText && <ErrorText>{errorText}</ErrorText>}
         </Wrapper>
     );
 };

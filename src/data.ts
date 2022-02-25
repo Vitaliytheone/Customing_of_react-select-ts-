@@ -4,16 +4,22 @@ export const selectOptions = [
     { value: "vanilla", label: "Vanilla" },
 ];
 
+export const errorText = 'Some fake error text...';
+
 export const radioData = () => {
     return [
         {
-            label: "Default"
+            label: "Default",
+            value: 1
         },
         {
-            label: "Error"
+            label: "Error",
+            value: 2
         },
         {
-            label: "Disable"
+            label: "Disable",
+            value: 3
+
         }
     ]
 }
