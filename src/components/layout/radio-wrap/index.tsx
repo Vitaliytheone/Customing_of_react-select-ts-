@@ -1,6 +1,8 @@
-import React from "react";
 import styled from "styled-components";
-import { radioData } from "./data";
+
+type TRadioWrap = {
+    children: React.ReactNode;
+};
 
 const Wrap = styled.div`
     display: flex;
@@ -8,14 +10,8 @@ const Wrap = styled.div`
     margin-top: 16px;
 `;
 
-const RadioWrap = () => {
-    return (
-        <Wrap>
-            {radioData().map((item, idx) => {
-                return <div key={idx}>{item.label}</div>;
-            })}
-        </Wrap>
-    );
+const RadioWrap = ({ children }: TRadioWrap) => {
+    return <Wrap>{children}</Wrap>;
 };
 
 export default RadioWrap;

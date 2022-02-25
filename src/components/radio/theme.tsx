@@ -7,6 +7,7 @@ export const getColor = (isError?: boolean) => {
 };
 
 export const RadioWrapper = styled.label`
+    margin-right: 12px;
     position: relative;
     display: block;
     input[type="radio"] {
@@ -43,9 +44,8 @@ export const RadioLabel = styled.label<{ error?: boolean }>`
     display: inline-block;
     cursor: pointer;
     position: relative;
-    padding-left: 22px;
+    padding-left: 26px;
     font-size: 16px;
-    line-height: 24px;
 
     &:after {
         content: "";
@@ -69,8 +69,8 @@ export const RadioLabelText = styled.span`
         display: block;
         width: 12px;
         height: 12px;
-        left: 4px;
-        top: 4px;
+        left: 5px;
+        top: 5px;
         position: absolute;
         background-color: ${PRIMARY_BLUE};
         border-radius: 50%;
