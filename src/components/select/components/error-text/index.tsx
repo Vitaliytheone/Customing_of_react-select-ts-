@@ -6,7 +6,7 @@ type TErrorText = {
 };
 
 const Text = styled.span`
-    margin-top: 4px;
+    position: absolute;
     color: ${RED};
 `;
 

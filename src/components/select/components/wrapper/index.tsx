@@ -12,6 +12,7 @@ type TWrapper = {
 };
 
 const WrapperStyled = styled.div<{ $isError: boolean; $isDisabled: boolean; $width: string; $maxWidth: string }>`
+    position: relative;
     width: ${({ $width }) => $width};
     max-width: ${({ $maxWidth }) => $maxWidth};
     color: ${({ $isError }) => ($isError ? RED : BLACK)};

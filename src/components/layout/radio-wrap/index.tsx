@@ -7,7 +7,7 @@ type TRadioWrap = {
 const Wrap = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-top: 16px;
+    margin-top: 28px;
 `;
 
 const RadioWrap = ({ children }: TRadioWrap) => {

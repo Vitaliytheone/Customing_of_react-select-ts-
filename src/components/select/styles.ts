@@ -51,6 +51,7 @@ export const customStyles: StylesConfig<TOption, false> = {
             backgroundColor: WHITE,
             overflow: "hidden",
             marginTop: "4px",
+            zIndex: 999,
         };
     },
     menuList: (provided) => {
@@ -78,13 +79,11 @@ export const customStyles: StylesConfig<TOption, false> = {
             color: "inherit",
         };
     },
-    dropdownIndicator: (provided) => {
+    dropdownIndicator: (provided, state) => {
+        const { isFocused, selectProps } = state;
         return {
             ...provided,
-            color: "inherit",
-            "&:hover": {
-                color: "inherit",
-            },
+            color: getColor(isFocused, selectProps.isError),
         };
     },
 };
