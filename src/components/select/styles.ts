@@ -10,7 +10,6 @@ export const getHoverColor = (isError: boolean) => {
 export const getColor = (isActive: boolean, isError: boolean) => {
     if (isError) return RED;
     if (isActive) return PURPLE;
-
     return GREY;
 };
 

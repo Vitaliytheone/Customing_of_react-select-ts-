@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Layout, Radio, Select } from "./components";
 import { selectOptions, radioData, errorText } from "./data";
 
@@ -6,9 +6,11 @@ const { Wrapper, RadioWrap, Title } = Layout;
 
 function App() {
     const [variant, setVariant] = useState(1);
-    const onChange = (value: number) => () => {
-        setVariant(value);
-    };
+
+    const onChange = useCallback((e) => {
+        setVariant(Number(e.target.dataset.variant));
+    }, []);
+
     return (
         <Wrapper>
             <Title>Custom React-Select component</Title>
@@ -21,15 +23,16 @@ function App() {
                 options={selectOptions}
             />
             <RadioWrap>
-                {radioData().map((item, idx) => {
+                {radioData.map((item, idx) => {
                     const { label, value } = item;
                     return (
                         <Radio
-                            id={String(idx)}
+                            id={label}
                             key={idx}
                             label={label}
                             checked={variant === value}
-                            onChange={onChange(value)}
+                            onChange={onChange}
+                            data-variant={value}
                         />
                     );
                 })}
